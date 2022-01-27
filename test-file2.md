@@ -1,5 +1,5 @@
 # Title
 
 [link 1](thisisalink.com)
-[image](thisisanimage)
+![image](thisisanimage)
 [link 2](thisisanotherlink.org)
