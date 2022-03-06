@@ -22,7 +22,10 @@ public class MarkdownParse {
                 currentIndex = closeParen + 1;
                 continue;
             }
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            var potentialLink = markdown.substring(openParen + 1, closeParen);
+            if (!potentialLink.contains("\n\n")) {
+                toReturn.add(markdown.substring(openParen + 1, closeParen));
+            }
             currentIndex = closeParen + 1;
         }
         return toReturn;
